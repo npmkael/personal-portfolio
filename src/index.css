@@ -1,4 +1,25 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-black-bg-100: #18191a;
+  --color-white-bg-100: #f6f8fc;
+
+  --color-neutral-100: #f6f8fc;
+  --color-neutral-98: #f2f5fa;
+  --color-neutral-95: #e9ecf2;
+  --color-neutral-90: #dadfe5;
+  --color-neutral-80: #c2c6cc;
+  --color-neutral-60: #919499;
+  --color-neutral-50: #797c80;
+  --color-neutral-40: #616366;
+  --color-neutral-30: #494a4d;
+  --color-neutral-20: #303133;
+  --color-neutral-10: #18191a;
+  --color-neutral-5: #0c0c0d;
+}
 
 body {
   background-size: 30px 30px;
@@ -8,4 +29,34 @@ body {
       transparent 1px
     ),
     linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+  font-family: Raleway, Poppins, Noto Sans KR, sans-serif;
+}
+
+.dark body {
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.02) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-color: #121212;
+  color: #eee;
+}
+
+@keyframes fadeInUpAnimation {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUpAnimation 1s ease forwards;
 }
