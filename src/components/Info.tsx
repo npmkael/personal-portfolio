@@ -1,6 +1,8 @@
-import { BriefcaseBusiness } from "lucide-react";
+import { BriefcaseBusiness, Wrench } from "lucide-react";
 import BentoCard from "./BentoCard";
 import Experience from "./Experience";
+import { frontend, tools } from "@/constants";
+import Technology from "./Technology";
 
 const Info = () => {
   return (
@@ -23,7 +25,7 @@ const Info = () => {
         </p>
       </BentoCard>
       <BentoCard
-        className="cols-span-1  md:col-span-2"
+        className="cols-span-1 md:col-span-2"
         delay="animate-delay-200"
         cardName="Experience"
         icon={<BriefcaseBusiness size={16} color="#797c80" />}
@@ -43,6 +45,31 @@ const Info = () => {
             year="2024"
             desc="August 99"
           />
+        </div>
+      </BentoCard>
+      <BentoCard
+        className="cols-span-1 md:col-span-4"
+        delay="animate-delay-200"
+        cardName="Tech Stack"
+        icon={<Wrench size={16} color="#797c80" />}
+      >
+        <div className="space-y-4">
+          <div>
+            <h3 className="text-sm font-semibold mb-2">Frontend</h3>
+            <div className="flex flex-wrap gap-1.5">
+              {frontend.map((tech) => (
+                <Technology name={tech.name} imgUrl={tech.imgUrl} />
+              ))}
+            </div>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold mb-2">Tools</h3>
+            <div className="flex flex-wrap gap-1.5">
+              {tools.map((tool) => (
+                <Technology name={tool.name} imgUrl={tool.imgUrl} />
+              ))}
+            </div>
+          </div>
         </div>
       </BentoCard>
     </section>

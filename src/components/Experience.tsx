@@ -18,7 +18,7 @@ const Experience = ({ title, desc, year, current }: Props) => {
 
       <div className="space-y-1">
         {/* Title */}
-        <h3 className="text-sm font-semibold text-accent dark:text-white transition-colors duration-150">
+        <h3 className="text-sm font-semibold text-accent transition-colors duration-150">
           {title}
         </h3>
 
@@ -29,7 +29,7 @@ const Experience = ({ title, desc, year, current }: Props) => {
           </span>
 
           {/* Year */}
-          <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-foreground/5 border border-foreground/10">
+          <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-background border border-foreground/10">
             {year}
           </span>
         </div>
