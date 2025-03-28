@@ -1,14 +1,16 @@
-import { BriefcaseBusiness, Wrench } from "lucide-react";
+import { BriefcaseBusiness, Projector, Wrench } from "lucide-react";
 import BentoCard from "./BentoCard";
 import Experience from "./Experience";
 import { frontend, tools } from "@/constants";
 import Technology from "./Technology";
+import { projects } from "@/constants/Projects";
+import ProjectCard from "./ProjectCard";
 
 const Info = () => {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-6 gap-2 auto-rows-auto">
+    <section className="grid grid-cols-1 md:grid-cols-6 gap-2">
       <BentoCard
-        className="cols-span-1 md:col-span-6"
+        className="col-span-1 md:col-span-4"
         cardName="About"
         icon={<BriefcaseBusiness size={16} color="#797c80" />}
       >
@@ -25,7 +27,7 @@ const Info = () => {
         </p>
       </BentoCard>
       <BentoCard
-        className="cols-span-1 md:col-span-2"
+        className="col-span-1 md:col-span-2 md:row-start-1"
         delay="animate-delay-200"
         cardName="Experience"
         icon={<BriefcaseBusiness size={16} color="#797c80" />}
@@ -48,7 +50,7 @@ const Info = () => {
         </div>
       </BentoCard>
       <BentoCard
-        className="cols-span-1 md:col-span-4"
+        className="col-span-1 md:col-span-6"
         delay="animate-delay-200"
         cardName="Tech Stack"
         icon={<Wrench size={16} color="#797c80" />}
@@ -70,6 +72,25 @@ const Info = () => {
               ))}
             </div>
           </div>
+        </div>
+      </BentoCard>
+      <BentoCard
+        className="col-span-1 md:col-span-6"
+        delay="animate-delay-200"
+        cardName="Projects"
+        icon={<Projector size={16} color="#797c80" />}
+      >
+        <div className="grid w-full auto-rows-[20rem] grid-cols-1 md:grid-cols-2 gap-4">
+          {projects.map((project) => (
+            <ProjectCard
+              name={project.name}
+              description={project.description}
+              className={project.className}
+              background={project.background}
+              tools={project.tools}
+              key={project.name}
+            />
+          ))}
         </div>
       </BentoCard>
     </section>

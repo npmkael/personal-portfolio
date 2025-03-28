@@ -1,5 +1,4 @@
 import { Mail, MapPin, Moon, Phone, Sun } from "lucide-react";
-import SplitText from "./SplitText";
 import { useState } from "react";
 import LinkButton from "./LinkButton";
 
@@ -10,7 +9,7 @@ const Profile = () => {
 
   return (
     <section className="mb-8 animate-fade-in">
-      <div className="flex md:flex-col items-center gap-4 md:gap-6">
+      <div className="flex items-center gap-4 md:gap-6">
         <img
           src="/profile-pic.jpg"
           width={160}
@@ -20,12 +19,10 @@ const Profile = () => {
         />
 
         <div className="flex-1 min-w-0">
-          <div className="flex items-center font-semibold justify-center gap-2">
-            <h3 className="text-lg md:text-2xl font-semibold">
-              Ezekiel Carreon
-            </h3>
+          <div className="flex items-center font-semibold  gap-2">
+            <h3 className="text-2xl font-semibold">Ezekiel Carreon</h3>
           </div>
-          <p className="text-xs md:text-sm mt-0.5 flex items-center md:justify-center gap-1 text-neutral-30 dark:text-neutral-90">
+          <p className="text-xs md:text-sm mt-0.5 flex items-center  gap-1 text-neutral-30 dark:text-neutral-90">
             <MapPin size={16} />
             <span className="truncate">Pampanga, Philippines</span>
           </p>

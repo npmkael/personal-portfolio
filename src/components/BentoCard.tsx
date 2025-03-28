@@ -9,7 +9,7 @@ type Props = {
 const BentoCard = ({ cardName, icon, children, delay, className }: Props) => {
   return (
     <div
-      className={`bento-card p-4 ${className} space-y-2 group animate-fade-in ${
+      className={`bento-card p-4 ${className} space-y-2 animate-fade-in ${
         delay ? delay : ""
       }`}
     >
