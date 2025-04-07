@@ -9,7 +9,7 @@ const MainPage = () => {
   return (
     <>
       <main className="animate-fade-in">
-        <div className="w-full h-full relative">
+        <div>
           <ParticlesComponent />
         </div>
         <div className="max-w-3xl mx-auto px-4 py-8">
@@ -17,12 +17,11 @@ const MainPage = () => {
           <Info />
         </div>
 
-        {/* Footer */}
-        <footer className="max-w-3xl mx-auto px-4 py-8 border-t border-border">
+        <div className="relative max-w-3xl mx-auto px-4 py-8 border-t border-border">
           <p className="text-sm text-foreground/70">
             © 2025 Ezekiel Jhon Carreon. All rights reserved.
           </p>
-        </footer>
+        </div>
       </main>
     </>
   );
