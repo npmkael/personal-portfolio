@@ -27,10 +27,15 @@ const Experience = ({
 
       <div className="space-y-1">
         {/* Title */}
-        <div className="flex items-center justify-between">
-          <h3 className="text-sm font-semibold text-accent transition-colors duration-150">
-            {title}
-          </h3>
+        <div className="flex justify-between items-start">
+          <div>
+            <h3 className="text-sm font-semibold text-foreground transition-colors duration-150">
+              {title}
+            </h3>
+            <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-background border border-foreground/10">
+              {year}
+            </span>
+          </div>
 
           <div className="flex items-center gap-1">
             {logo && (
@@ -41,7 +46,7 @@ const Experience = ({
               />
             )}
             {organization && (
-              <span className="text-xs text-foreground/70 dark:text-accent/70">
+              <span className="text-xs text-foreground/70 ">
                 {organization.length > 15
                   ? `${organization.slice(0, 15)}...`
                   : organization}
@@ -50,16 +55,7 @@ const Experience = ({
           </div>
         </div>
 
-        <div className="flex items-center">
-          {/* Description */}
-          <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-background border border-foreground/10">
-            {year}
-          </span>
-        </div>
-
-        <span className="text-xs text-foreground/70 dark:text-accent/70">
-          {desc}
-        </span>
+        <span className="text-xs text-foreground/90">{desc}</span>
 
         {/* Year */}
       </div>

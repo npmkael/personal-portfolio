@@ -3,9 +3,12 @@ import { useState } from "react";
 import LinkButton from "./LinkButton";
 
 import { motion, AnimatePresence } from "motion/react";
+import { SunIcon } from "./ui/sun";
+import { MoonIcon } from "./ui/moon";
+import { useTheme } from "@/context/ThemeContext";
 
 const Profile = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const { isDarkMode, themeToggle } = useTheme();
 
   return (
     <section className="mb-8 animate-fade-in">
@@ -19,8 +22,52 @@ const Profile = () => {
         />
 
         <div className="flex-1 min-w-0 font-poppins">
-          <div className="flex items-center font-semibold  gap-2">
+          <div className="flex items-center justify-between">
             <h3 className="text-3xl font-semibold">Ezekiel Carreon</h3>
+            <button
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-foreground/5 hover:text-accent-foreground h-10 w-10 relative rounded-full transition-all duration-300 group border border-border"
+              onClick={themeToggle}
+            >
+              <AnimatePresence mode="wait">
+                {isDarkMode ? (
+                  <motion.div
+                    key="moon"
+                    initial={{
+                      opacity: 0,
+                    }}
+                    animate={{
+                      opacity: 1,
+                    }}
+                    exit={{
+                      opacity: 0,
+                    }}
+                    transition={{
+                      duration: 0.1,
+                    }}
+                  >
+                    <MoonIcon size={23} />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="sun"
+                    initial={{
+                      opacity: 0,
+                    }}
+                    animate={{
+                      opacity: 1,
+                    }}
+                    exit={{
+                      opacity: 0,
+                    }}
+                    transition={{
+                      duration: 0.2,
+                    }}
+                  >
+                    <SunIcon size={23} />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </button>
           </div>
           <p className="text-xs md:text-sm mt-0.5 flex items-center  gap-1 text-neutral-30 dark:text-neutral-90">
             <MapPin size={16} />

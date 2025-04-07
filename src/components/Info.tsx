@@ -61,7 +61,7 @@ const Info = () => {
             title="BS Computer Science"
             year="2025 - Present"
             organization="Don Honorio Ventura State University"
-            desc="Lorem ipsum dolor sit amet, consectetur"
+            desc="Currently pursuing a degree in Computer Science."
             logo="/dhvsu-logo.png"
             current={true}
           />
@@ -71,7 +71,7 @@ const Info = () => {
             year="2021 - 2023"
             organization="STI College"
             logo="/sti-logo.png"
-            desc="Lorem ipsum dolor sit amet, consectetur"
+            desc="Studied Information and Communications Technology (ICT) focusing on Web Development and Programming."
           />
 
           <Education
