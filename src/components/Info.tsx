@@ -1,16 +1,17 @@
-import { BriefcaseBusiness, Projector, Wrench } from "lucide-react";
+import { BriefcaseBusiness, Projector, School, Wrench } from "lucide-react";
 import BentoCard from "./BentoCard";
 import Experience from "./Experience";
 import { frontend, tools } from "@/constants";
 import Technology from "./Technology";
 import { projects } from "@/constants/Projects";
 import ProjectCard from "./ProjectCard";
+import Education from "./Education";
 
 const Info = () => {
   return (
     <section className="grid grid-cols-1 md:grid-cols-6 gap-2">
       <BentoCard
-        className="col-span-1 md:col-span-4"
+        className="col-span-1 md:col-span-6"
         cardName="About"
         icon={<BriefcaseBusiness size={16} color="#797c80" />}
       >
@@ -27,25 +28,56 @@ const Info = () => {
         </p>
       </BentoCard>
       <BentoCard
-        className="col-span-1 md:col-span-2"
+        className="col-span-1 md:col-span-6"
         delay="animate-delay-200"
         cardName="Experience"
         icon={<BriefcaseBusiness size={16} color="#797c80" />}
       >
         <div className="relative space-y-4 mt-4">
           <div className="absolute left-1.5 top-1.5 bottom-2 w-px bg-border"></div>
-
-          <Experience
-            title="BS Computer Science"
-            year="2025"
-            desc="Don Honorio Ventura State University"
-            current={true}
-          />
-
           <Experience
             title="Web Developer Intern"
             year="2024"
-            desc="August 99"
+            organization="August 99"
+            desc="Identified and resolved various technical issues, implemented fixes to improve site performance, and collaborated with the development team to maintain website integrity"
+            logo="/aug-99-icon.png"
+            technologies={[
+              "/javascript-plain.svg",
+              "/wordpress-plain.svg",
+              "/php-plain.svg",
+            ]}
+          />
+        </div>
+      </BentoCard>
+      <BentoCard
+        cardName="Education"
+        icon={<School size={16} color="#797c80" />}
+        className="col-span-1 md:col-span-6"
+      >
+        <div className="relative space-y-4 mt-4">
+          <div className="absolute left-1.5 top-1.5 bottom-2 w-px bg-border"></div>
+
+          <Education
+            title="BS Computer Science"
+            year="2025 - Present"
+            organization="Don Honorio Ventura State University"
+            desc="Lorem ipsum dolor sit amet, consectetur"
+            logo="/dhvsu-logo.png"
+            current={true}
+          />
+
+          <Education
+            title="Senior High School"
+            year="2021 - 2023"
+            organization="STI College"
+            logo="/sti-logo.png"
+            desc="Lorem ipsum dolor sit amet, consectetur"
+          />
+
+          <Education
+            title="Hello, World! 👋🏻"
+            year="2020"
+            desc="Wrote my first line of code."
           />
         </div>
       </BentoCard>
@@ -53,7 +85,7 @@ const Info = () => {
       <BentoCard
         className="col-span-1 md:col-span-6"
         delay="animate-delay-250"
-        cardName="Tech Stack"
+        cardName="Technologies"
         icon={<Wrench size={16} color="#797c80" />}
       >
         <div className="space-y-4">

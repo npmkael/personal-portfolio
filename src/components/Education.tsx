@@ -5,7 +5,6 @@ type Props = {
   current?: boolean;
   logo?: string;
   organization?: string;
-  technologies: string[];
 };
 
 const Experience = ({
@@ -15,7 +14,6 @@ const Experience = ({
   current,
   logo,
   organization,
-  technologies,
 }: Props) => {
   return (
     <div className="relative pl-6 group/role">
@@ -34,22 +32,21 @@ const Experience = ({
             {title}
           </h3>
 
-          <div className="flex flex-col items-end">
-            <div className="flex items-center gap-1">
-              {logo && (
-                <img src={logo} alt="logo" className="w-4 h-4 rounded-full" />
-              )}
-              {organization && (
-                <span className="text-xs text-foreground/70 dark:text-accent/70">
-                  {organization.length > 15
-                    ? `${organization.slice(0, 15)}...`
-                    : organization}
-                </span>
-              )}
-            </div>
-            <span className="text-xs text-foreground/70 dark:text-accent/70">
-              Manila
-            </span>
+          <div className="flex items-center gap-1">
+            {logo && (
+              <img
+                src={logo}
+                alt="logo"
+                className="w-4 h-4 rounded-full object-cover"
+              />
+            )}
+            {organization && (
+              <span className="text-xs text-foreground/70 dark:text-accent/70">
+                {organization.length > 15
+                  ? `${organization.slice(0, 15)}...`
+                  : organization}
+              </span>
+            )}
           </div>
         </div>
 
@@ -63,20 +60,6 @@ const Experience = ({
         <span className="text-xs text-foreground/70 dark:text-accent/70">
           {desc}
         </span>
-
-        <div className="flex gap-2 items-center mt-2">
-          {technologies?.map((tech) => (
-            <button className="cursor-pointer">
-              <img
-                src={tech}
-                alt={"tech logo"}
-                width={15}
-                height={15}
-                className="dark:invert"
-              />
-            </button>
-          ))}
-        </div>
 
         {/* Year */}
       </div>
