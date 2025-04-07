@@ -27,7 +27,7 @@ const Info = () => {
         </p>
       </BentoCard>
       <BentoCard
-        className="col-span-1 md:col-span-2 md:row-start-1"
+        className="col-span-1 md:col-span-2"
         delay="animate-delay-200"
         cardName="Experience"
         icon={<BriefcaseBusiness size={16} color="#797c80" />}
@@ -49,9 +49,10 @@ const Info = () => {
           />
         </div>
       </BentoCard>
+
       <BentoCard
         className="col-span-1 md:col-span-6"
-        delay="animate-delay-200"
+        delay="animate-delay-250"
         cardName="Tech Stack"
         icon={<Wrench size={16} color="#797c80" />}
       >
@@ -76,19 +77,19 @@ const Info = () => {
       </BentoCard>
       <BentoCard
         className="col-span-1 md:col-span-6"
-        delay="animate-delay-200"
+        delay="animate-delay-300"
         cardName="Projects"
         icon={<Projector size={16} color="#797c80" />}
+        link="/projects"
       >
-        <div className="grid w-full auto-rows-[20rem] grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid w-full grid-cols-1 md:grid-cols-2 gap-4">
           {projects.map((project) => (
             <ProjectCard
-              name={project.name}
+              projectName={project.name}
               description={project.description}
-              className={project.className}
-              background={project.background}
-              tools={project.tools}
-              key={project.name}
+              technologies={project.technologies}
+              imgUrl={project.imgUrl}
+              featured={project.featured}
             />
           ))}
         </div>

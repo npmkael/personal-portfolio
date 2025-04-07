@@ -14,12 +14,15 @@
     "@tailwindcss/vite": "^4.0.14",
     "lucide-react": "^0.483.0",
     "motion": "^12.5.0",
+    "ogl": "^1.0.11",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-router-dom": "^7.5.0",
     "tailwindcss": "^4.0.14"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
+    "@iconify/react": "^5.2.1",
     "@types/node": "^22.13.10",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",

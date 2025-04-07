@@ -1,4 +1,4 @@
-import { Mail, MapPin, Moon, Phone, Sun } from "lucide-react";
+import { Download, Mail, MapPin, Moon, Phone, Sun } from "lucide-react";
 import { useState } from "react";
 import LinkButton from "./LinkButton";
 
@@ -18,9 +18,9 @@ const Profile = () => {
           alt="Ezekiel"
         />
 
-        <div className="flex-1 min-w-0">
+        <div className="flex-1 min-w-0 font-poppins">
           <div className="flex items-center font-semibold  gap-2">
-            <h3 className="text-2xl font-semibold">Ezekiel Carreon</h3>
+            <h3 className="text-3xl font-semibold">Ezekiel Carreon</h3>
           </div>
           <p className="text-xs md:text-sm mt-0.5 flex items-center  gap-1 text-neutral-30 dark:text-neutral-90">
             <MapPin size={16} />
@@ -37,8 +37,8 @@ const Profile = () => {
               className="bg-foreground text-background"
             />
             <LinkButton
-              text="Contact"
-              icon={<Phone size={15} />}
+              text="Download CV"
+              icon={<Download size={15} />}
               className="bg-background text-foreground"
             />
           </div>
