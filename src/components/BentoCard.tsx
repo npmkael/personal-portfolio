@@ -1,5 +1,4 @@
 import { ChevronRight } from "lucide-react";
-import { NavLink } from "react-router-dom";
 
 type Props = {
   cardName: string;

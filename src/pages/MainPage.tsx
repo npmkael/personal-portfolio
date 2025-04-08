@@ -1,11 +1,8 @@
 import Info from "@/components/Info";
 import ParticlesComponent from "@/components/Particles";
 import Profile from "@/components/Profile";
-import { useTheme } from "@/context/ThemeContext";
 
 const MainPage = () => {
-  const { isDarkMode } = useTheme();
-
   return (
     <>
       <main className="animate-fade-in">

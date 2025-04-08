@@ -1,8 +1,7 @@
-import { useEffect, useMemo, useState, useCallback } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import {
-  type Container,
   type ISourceOptions,
   MoveDirection,
   OutMode,
@@ -27,8 +26,6 @@ const ParticlesComponent = () => {
       setInit(true);
     });
   }, []);
-
-  const particlesLoaded = async (container?: Container): Promise<void> => {};
 
   const lightModeConfig = {
     background: { color: "#ffffff" },
@@ -106,13 +103,7 @@ const ParticlesComponent = () => {
   );
 
   if (init) {
-    return (
-      <Particles
-        id="tsparticles"
-        particlesLoaded={particlesLoaded}
-        options={options}
-      />
-    );
+    return <Particles id="tsparticles" options={options} />;
   }
 
   return <></>;

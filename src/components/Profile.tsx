@@ -1,5 +1,4 @@
-import { Download, Mail, MapPin, Moon, Phone, Sun } from "lucide-react";
-import { useState } from "react";
+import { Download, Mail, MapPin } from "lucide-react";
 import LinkButton from "./LinkButton";
 
 import { motion, AnimatePresence } from "motion/react";
