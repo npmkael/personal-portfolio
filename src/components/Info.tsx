@@ -19,7 +19,8 @@ const Info = () => {
   return (
     <section className="grid grid-cols-1 md:grid-cols-6 gap-2">
       <BentoCard
-        className="col-span-1 md:col-span-6"
+        className="col-span-1 md:col-span-6 delay-75"
+        delay="animate-delay-200"
         cardName="About"
         icon={<BriefcaseBusiness size={16} color="#797c80" />}
       >
@@ -38,7 +39,7 @@ const Info = () => {
 
       <BentoCard
         className="col-span-1 md:col-span-6"
-        delay="animate-delay-200"
+        delay="animate-delay-250"
         cardName="Experience"
         icon={<BriefcaseBusiness size={16} color="#797c80" />}
       >
@@ -61,6 +62,7 @@ const Info = () => {
       <BentoCard
         cardName="Education"
         icon={<School size={16} color="#797c80" />}
+        delay="animate-delay-300"
         className="col-span-1 md:col-span-6"
       >
         <div className="relative space-y-4 mt-4">
@@ -93,7 +95,7 @@ const Info = () => {
 
       <BentoCard
         className="col-span-1 md:col-span-6"
-        delay="animate-delay-250"
+        delay="animate-delay-350"
         cardName="Technologies"
         icon={<Wrench size={16} color="#797c80" />}
       >
@@ -118,7 +120,7 @@ const Info = () => {
       </BentoCard>
       <BentoCard
         className="col-span-1 md:col-span-6"
-        delay="animate-delay-300"
+        delay="animate-delay-400"
         cardName="Projects"
         icon={<Projector size={16} color="#797c80" />}
         link="/projects"
@@ -137,6 +139,7 @@ const Info = () => {
       </BentoCard>
       <BentoCard
         className="col-span-1 md:col-span-6"
+        delay="animate-delay-450"
         cardName="Contact"
         icon={<Mail size={16} color="#797c80" />}
       >

@@ -17,10 +17,10 @@ function App() {
   return (
     <div className="">
       <AnimatePresence mode="wait">
-        {true ? (
+        {loadingComplete ? (
           <MainPage />
         ) : (
-          <main className="flex items-center justify-center h-screen overflow-hidden">
+          <main className="p-4 flex items-center justify-center h-screen overflow-hidden">
             <Terminal>
               <TypingAnimation>
                 &gt; npx install ezekielcarreon@latest init

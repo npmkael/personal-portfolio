@@ -151,6 +151,14 @@ body {
   animation-delay: 0.35s;
 }
 
+.animate-delay-400 {
+  animation-delay: 0.4s;
+}
+
+.animate-delay-450 {
+  animation-delay: 0.45s;
+}
+
 .dark {
   /* --background: oklch(0.145 0 0); */
   --foreground: oklch(0.985 0 0);
