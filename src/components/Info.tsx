@@ -1,4 +1,11 @@
-import { BriefcaseBusiness, Projector, School, Wrench } from "lucide-react";
+import {
+  BriefcaseBusiness,
+  ChevronRight,
+  Mail,
+  Projector,
+  School,
+  Wrench,
+} from "lucide-react";
 import BentoCard from "./BentoCard";
 import Experience from "./Experience";
 import { frontend, tools } from "@/constants";
@@ -6,6 +13,7 @@ import Technology from "./Technology";
 import { projects } from "@/constants/Projects";
 import ProjectCard from "./ProjectCard";
 import Education from "./Education";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Info = () => {
   return (
@@ -27,6 +35,7 @@ const Info = () => {
           contribute to exciting projects.
         </p>
       </BentoCard>
+
       <BentoCard
         className="col-span-1 md:col-span-6"
         delay="animate-delay-200"
@@ -124,6 +133,67 @@ const Info = () => {
               featured={project.featured}
             />
           ))}
+        </div>
+      </BentoCard>
+      <BentoCard
+        className="col-span-1 md:col-span-6"
+        cardName="Contact"
+        icon={<Mail size={16} color="#797c80" />}
+      >
+        <div className="space-y-4">
+          <a
+            href="mailto:kielycarreon123@gmail.com"
+            className="block p-2 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors group"
+          >
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-xs text-foreground/70">Email</p>
+                <p className="text-sm font-medium">kielycarreon123@gmail.com</p>
+              </div>
+              <ChevronRight
+                size={14}
+                className="group-hover:translate-x-0.5 transition-all duration-200"
+              />
+            </div>
+          </a>
+          <div>
+            <p className="text-xs text-foreground/70 mb-2">Social Links</p>
+            <div className="grid grid-cols-3 gap-2">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/bryllim"
+                className="flex items-center justify-center p-2 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors gap-2"
+              >
+                <FaGithub size={20} />
+                <span className="text-sm text-foreground/70 hidden md:inline-block">
+                  Github
+                </span>
+              </a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/bryllim"
+                className="flex items-center justify-center p-2 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors gap-1"
+              >
+                <FaLinkedin size={20} />
+                <span className="text-sm text-foreground/70 hidden md:inline-block">
+                  LinkedIn
+                </span>
+              </a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/bryllim"
+                className="flex items-center justify-center p-2 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors gap-1"
+              >
+                <FaInstagram size={20} />
+                <span className="text-sm text-foreground/70 hidden md:inline-block">
+                  Instagram
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
       </BentoCard>
     </section>
