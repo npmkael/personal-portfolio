@@ -143,7 +143,7 @@ const Info = () => {
         <div className="space-y-4">
           <a
             href="mailto:kielycarreon123@gmail.com"
-            className="block p-2 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors group"
+            className="block p-2 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors group dark:bg-background dark:hover:bg-background/60"
           >
             <div className="flex items-center justify-between">
               <div>
@@ -163,7 +163,7 @@ const Info = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://github.com/bryllim"
-                className="flex items-center justify-center p-2 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors gap-2"
+                className="flex items-center justify-center p-2 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors gap-2 dark:bg-background dark:hover:bg-background/60"
               >
                 <FaGithub size={20} />
                 <span className="text-sm text-foreground/70 hidden md:inline-block">
@@ -174,7 +174,7 @@ const Info = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://github.com/bryllim"
-                className="flex items-center justify-center p-2 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors gap-1"
+                className="flex items-center justify-center p-2 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors gap-1 dark:bg-background dark:hover:bg-background/60"
               >
                 <FaLinkedin size={20} />
                 <span className="text-sm text-foreground/70 hidden md:inline-block">
@@ -185,7 +185,7 @@ const Info = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://github.com/bryllim"
-                className="flex items-center justify-center p-2 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors gap-1"
+                className="flex items-center justify-center p-2 rounded-md bg-gray-100 dark:bg-background hover:bg-gray-200 transition-colors gap-1 dark:hover:bg-background/60"
               >
                 <FaInstagram size={20} />
                 <span className="text-sm text-foreground/70 hidden md:inline-block">
