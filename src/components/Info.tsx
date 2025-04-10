@@ -28,7 +28,7 @@ const Info = () => {
           Hi! I'm an aspiring Front-End Developer with a passion for building
           clean, responsive, and user-friendly web interfaces. I specialize in
           JavaScript and Python, constantly honing my skills to create seamless
-          digital experiences
+          digital experiences.
           <br />
           <br />
           Currently, I'm focused on expanding my knowledge in modern frameworks

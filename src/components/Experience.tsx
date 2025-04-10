@@ -20,11 +20,12 @@ const Experience = ({
   return (
     <div className="relative pl-6 group/role">
       <div
-        className={`absolute left-0 top-1.5 w-3 h-3 rounded-full border-2 ${
-          current
-            ? "border-accent bg-accent"
-            : "border-border bg-background group-hover/role:bg-accent"
-        } transition-colors duration-150`}
+        className={`absolute left-0 top-1.5 w-3 h-3 rounded-full border-2 
+                    border-border${
+                      current
+                        ? "border-accent bg-accent"
+                        : "border-border bg-background group-hover/role:bg-accent"
+                    } transition-colors duration-150`}
       ></div>
 
       <div className="space-y-1">
