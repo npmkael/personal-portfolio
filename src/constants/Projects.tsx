@@ -5,6 +5,8 @@ export const projects = [
     imgUrl: "/project-1.gif",
     technologies: ["HTML", "CSS", "React", "TypeScript"],
     featured: true,
+    liveDemo: "https://webdex-silk.vercel.app",
+    sourceCode: "https://github.com/npmkael/webdex",
   },
   {
     name: "CMS System",

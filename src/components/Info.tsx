@@ -104,7 +104,11 @@ const Info = () => {
             <h3 className="text-sm font-semibold mb-2">Frontend</h3>
             <div className="flex flex-wrap gap-1.5">
               {frontend.map((tech) => (
-                <Technology name={tech.name} imgUrl={tech.imgUrl} />
+                <Technology
+                  name={tech.name}
+                  imgUrl={tech.imgUrl}
+                  key={tech.name}
+                />
               ))}
             </div>
           </div>
@@ -112,7 +116,11 @@ const Info = () => {
             <h3 className="text-sm font-semibold mb-2">Tools</h3>
             <div className="flex flex-wrap gap-1.5">
               {tools.map((tool) => (
-                <Technology name={tool.name} imgUrl={tool.imgUrl} />
+                <Technology
+                  name={tool.name}
+                  imgUrl={tool.imgUrl}
+                  key={tool.name}
+                />
               ))}
             </div>
           </div>
@@ -133,6 +141,9 @@ const Info = () => {
               technologies={project.technologies}
               imgUrl={project.imgUrl}
               featured={project.featured}
+              sourceCode={project.sourceCode}
+              liveDemo={project.liveDemo}
+              key={project.name}
             />
           ))}
         </div>

@@ -61,7 +61,7 @@ const Experience = ({
 
         <div className="flex gap-2 items-center mt-2">
           {technologies?.map((tech) => (
-            <button className="cursor-pointer">
+            <button className="cursor-pointer" key={tech}>
               <img
                 src={tech}
                 alt={"tech logo"}
