@@ -176,7 +176,7 @@ const Info = () => {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://github.com/bryllim"
+                href="https://github.com/npmkael"
                 className="flex items-center justify-center p-2 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors gap-2 dark:bg-background dark:hover:bg-background/60"
               >
                 <FaGithub size={20} />
@@ -187,7 +187,7 @@ const Info = () => {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://github.com/bryllim"
+                href="#"
                 className="flex items-center justify-center p-2 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors gap-1 dark:bg-background dark:hover:bg-background/60"
               >
                 <FaLinkedin size={20} />
@@ -198,7 +198,7 @@ const Info = () => {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://github.com/bryllim"
+                href="https://www.instagram.com/kiel.crrn/"
                 className="flex items-center justify-center p-2 rounded-md bg-gray-100 dark:bg-background hover:bg-gray-200 transition-colors gap-1 dark:hover:bg-background/60"
               >
                 <FaInstagram size={20} />
